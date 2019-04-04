@@ -26,25 +26,39 @@ function ConvertHandler() {
   
   this.getReturnUnit = function(initUnit) {
     switch(initUnit) {
-      case 'gal': return 'L';
-      case 'lbs': return 'kg';
-      case 'mi': return 'km';
-      case 'L': return 'gal'; 
-      case 'kg': return 'lbs';
-      case 'km': return 'mi';
-      default: return null;
+      case 'gal': 
+        return 'L';
+      case 'lbs': 
+        return 'kg';
+      case 'mi': 
+        return 'km';
+      case 'L': 
+        return 'gal'; 
+      case 'kg': 
+        return 'lbs';
+      case 'km': 
+        return 'mi';
+      default: 
+        return null;
     }
   };
 
   this.spellOutUnit = function(unit) {
     switch(unit) {
-      case 'gal': return 'gallons';
-      case 'lbs': return 'pounds';
-      case 'mi': return 'miles';
-      case 'L': return 'liters';
-      case 'kg': return 'kilograms';
-      case 'km': return 'kilometers';
-      default: return null;
+      case 'gal': 
+        return 'gallons';
+      case 'lbs': 
+        return 'pounds';
+      case 'mi': 
+        return 'miles';
+      case 'L': 
+        return 'liters';
+      case 'kg': 
+        return 'kilograms';
+      case 'km': 
+        return 'kilometers';
+      default: 
+        return null;
     }
   };
   
@@ -53,13 +67,20 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
     switch(initUnit) {
-      case 'gal': return +(initNum*galToL).toFixed(5);
-      case 'lbs': return +(initNum*lbsToKg).toFixed(5);
-      case 'mi': return +(initNum*miToKm).toFixed(5);
-      case 'L': return +(initNum/galToL).toFixed(5);
-      case 'kg': return +(initNum/lbsToKg).toFixed(5);
-      case 'km': return +(initNum/miToKm).toFixed(5);
-      default: return null;
+      case 'gal': 
+        return +(initNum*galToL).toFixed(5);
+      case 'lbs': 
+        return +(initNum*lbsToKg).toFixed(5);
+      case 'mi': 
+        return +(initNum*miToKm).toFixed(5);
+      case 'L': 
+        return +(initNum/galToL).toFixed(5);
+      case 'kg': 
+        return +(initNum/lbsToKg).toFixed(5);
+      case 'km': 
+        return +(initNum/miToKm).toFixed(5);
+      default: 
+        return null;
     }
   };
   
